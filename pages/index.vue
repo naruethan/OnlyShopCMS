@@ -49,7 +49,7 @@
             <CAvatarBadge size="1.0em" bg="green.500" />
           </CAvatar>
           <CAvatar
-            name="Segun Adebayo"
+            name="Segun Adebayo TEST"
             alt="Segun Adebayo"
             src="https://pbs.twimg.com/profile_images/1169353373012897802/skPUWd6e_400x400.jpg"
           >
