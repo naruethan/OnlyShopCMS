@@ -2,7 +2,7 @@
   <div class="container">
     <CThemeProvider>
       <CColorModeProvider>
-        <CBox font-family="body" as="main">
+        <CBox bg="tomato" font-family="body" as="main">
           <CReset />
 
           <c-heading as="h6" size="xs" text-align="center">
