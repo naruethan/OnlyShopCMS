@@ -2,44 +2,48 @@
   <div class="container">
     <CThemeProvider>
       <CColorModeProvider>
-        <CBox bg="tomato" font-family="body" as="main">
+        <CBox font-family="body" p="4" as="main">
           <CReset />
 
-          <c-heading as="h6" size="xs" text-align="center">
-            In love with Vue & Nuxt
-          </c-heading>
+          <c-grid w="100%" template-columns="repeat(12, 1fr)" gap="2">
+            <c-grid-item col-span="2" h="10"
+              ><c-text fontSize="xl" align="left"
+                >Shabu Kru.Watree Shop</c-text
+              ></c-grid-item
+            >
 
-          <c-breadcrumb
-            font-weight="medium"
-            font-size="sm"
-            separator=""
-            align="center"
-          >
-            <c-breadcrumb-item>
-              <c-breadcrumb-link as="nuxt-link" to="/">
-                <c-button variant-color="green"
-                  >Home</c-button
-                ></c-breadcrumb-link
-              >
-            </c-breadcrumb-item>
+            <c-grid-item
+              align="center"
+              col-start="4"
+              col-end="10"
+              h="10"
+              bg="red.300"
+            >
+              <c-breadcrumb-item>
+                <c-breadcrumb-link as="nuxt-link" to="/">
+                  <c-button variant-color="green"
+                    >Home</c-button
+                  ></c-breadcrumb-link
+                >
+              </c-breadcrumb-item>
 
-            <c-breadcrumb-item>
-              <c-breadcrumb-link as="nuxt-link" to="/Test2"
-                ><c-button variant-color="yellow"
-                  >Order</c-button
-                ></c-breadcrumb-link
-              >
-            </c-breadcrumb-item>
-
-            <c-breadcrumb-item>
-              <c-breadcrumb-link as="nuxt-link" to="/Test3"
-                ><c-button variant-color="blue"
-                  >Check out</c-button
-                ></c-breadcrumb-link
-              >
-            </c-breadcrumb-item>
-          </c-breadcrumb>
-
+              <c-breadcrumb-item>
+                <c-breadcrumb-link as="nuxt-link" to="/Test2"
+                  ><c-button variant-color="yellow"
+                    >Order</c-button
+                  ></c-breadcrumb-link
+                >
+              </c-breadcrumb-item>
+              <c-breadcrumb-item>
+                <c-breadcrumb-link as="nuxt-link" to="/Test3"
+                  ><c-button variant-color="blue"
+                    >Check out</c-button
+                  ></c-breadcrumb-link
+                >
+              </c-breadcrumb-item></c-grid-item
+            >
+            <c-box w="100%" h="10" bg="orange.300" />
+          </c-grid>
           <Nuxt />
         </CBox>
       </CColorModeProvider>
