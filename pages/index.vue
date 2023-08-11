@@ -1,92 +1,21 @@
 <template>
   <div class="container">
-    <CBox
-      v-bind="mainStyles[colorMode]"
-      d="flex"
-      w="100vw"
-      h="100vh"
-      flex-dir="column"
-      justify-content="center"
-    >
-      <c-box bg="tomato" w="100%" p="4" color="white"> This is the Box </c-box>
-      <c-list as="ol" style-type="decimal">
-        <c-list-item>Lorem ipsum dolor sit amet</c-list-item>
-
-        <c-list-item>Consectetur asdasdsadipiscing elit</c-list-item>
-        <c-list-item>Integer molestie lorem at massa</c-list-item>
-        <c-list-item>Facilisis in pretium nisl aliquet</c-list-item>
-      </c-list>
-      <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading>
-
-      <CFlex justify="center" direction="column" align="center">
-        <c-box bg="tomato" p="4" color="white"> This is the Box </c-box>
-        <CBox mb="3">
-          <CIconButton
-            mr="3"
-            :icon="colorMode === 'light' ? 'moon' : 'sun'"
-            :aria-label="`Switch to ${
-              colorMode === 'light' ? 'dark' : 'light'
-            } mode`"
-            @click="toggleColorMode"
-          />
-          <CButton left-icon="info" variant-color="blue" @click="showToast">
-            Show Toast
-          </CButton>
-        </CBox>
-        <CAvatarGroup>
-          <CAvatar
-            name="Evan You"
-            alt="Evan You"
-            src="https://pbs.twimg.com/profile_images/1206997998900850688/cTXTQiHm_400x400.jpg"
-          >
-            <CAvatarBadge size="1.0em" bg="green.500" />
-          </CAvatar>
-          <CAvatar
-            name="Jonathan Bakebwa"
-            alt="Jonathan Bakebwa"
-            src="https://res.cloudinary.com/xtellar/image/upload/v1572857445/me_zqos4e.jpg"
-          >
-            <CAvatarBadge size="1.0em" bg="green.500" />
-          </CAvatar>
-          <CAvatar
-            name="Segun Adebayo TEST"
-            alt="Segun Adebayo"
-            src="https://pbs.twimg.com/profile_images/1169353373012897802/skPUWd6e_400x400.jpg"
-          >
-            <CAvatarBadge size="1.0em" bg="green.500" />
-          </CAvatar>
-          <CAvatar src="pop">
-            <CAvatarBadge size="1.0em" border-color="papayawhip" bg="tomato" />
-          </CAvatar>
-        </CAvatarGroup>
-        <CButton
-          left-icon="close"
-          variant-color="red"
-          mt="3"
-          @click="showModal = true"
-        >
-          Delete Account
-        </CButton>
-        <CModal :is-open="showModal">
-          <CModalOverlay />
-          <CModalContent>
-            <CModalHeader>Are you sure?</CModalHeader>
-            <CModalBody>Deleting user cannot be undone</CModalBody>
-            <CModalFooter>
-              <CButton @click="showModal = false"> Cancel </CButton>
-              <CButton
-                margin-left="3"
-                variant-color="red"
-                @click="showModal = false"
-              >
-                Delete User
-              </CButton>
-            </CModalFooter>
-            <CModalCloseButton @click="showModal = false" />
-          </CModalContent>
-        </CModal>
-      </CFlex>
-    </CBox>
+    <c-box w="100%" h="200" />
+    <c-grid w="100%" h="200" template-columns="repeat(12, 1fr)" gap="2">
+      <c-grid-item align="center" col-start="3" col-end="11" h="10">
+        <c-box w="100%">
+          <c-grid w="100%" h="200" template-columns="repeat(7, 1fr)" gap="5">
+            <c-box w="100%" h="100%" bg="orange.300" />
+            <c-box w="100%" h="100%" bg="gray.300" />
+            <c-box w="100%" h="100%" bg="blue.300" />
+            <c-box w="100%" h="100%" bg="orange.300" />
+            <c-box w="100%" h="100%" bg="gray.300" />
+            <c-box w="100%" h="100%" bg="blue.300" />
+            <c-box w="100%" h="100%" bg="orange.300" />
+          </c-grid>
+        </c-box>
+      </c-grid-item>
+    </c-grid>
   </div>
 </template>
 
